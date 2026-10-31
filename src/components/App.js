@@ -223,7 +223,7 @@ function App() {
   const [cityIndex, setCityIndex] = useState(0);
   const [landmarkIndex, setLandmarkIndex] = useState(0);
 
-  const selectedState = data[stateIndex];
+  const selectedState = state[stateIndex];
   const selectedCity = selectedState.cities[cityIndex];
   const selectedLandmark = selectedCity.landmarks[landmarkIndex];
 
@@ -246,7 +246,7 @@ function App() {
     <div>
       {/* State Dropdown */}
       <select id="state" value={stateIndex} onChange={handleStateChange}>
-        {data.map((state, index) => (
+        {state.map((state, index) => (
           <option key={index} value={index}>
             {state.name}
           </option>
